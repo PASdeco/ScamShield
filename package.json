@@ -1,0 +1,20 @@
+{
+  "name": "scamshield",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "contracts/genlayer"
+  ],
+  "scripts": {
+    "dev:extension": "npm --workspace @scamshield/extension run dev",
+    "dev:relay": "npm --workspace @scamshield/relay run dev",
+    "build": "npm run build --workspaces --if-present",
+    "vercel-build": "npm --workspace @scamshield/relay run build",
+    "release:tester": "node scripts/build-tester-release.mjs",
+    "lint:contract": "npm --workspace @scamshield/genlayer-contract run lint:contract",
+    "deploy:contract": "npm --workspace @scamshield/genlayer-contract run deploy"
+  }
+}
