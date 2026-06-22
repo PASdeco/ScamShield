@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
-import { genlayer_lint_contract } from "../../scripts/genskill-lint-bridge.mjs";
+import { genlayer_lint_contract } from "../../../scripts/genskill-lint-bridge.mjs";
 
 async function main() {
   const contractPath = path.resolve(process.cwd(), "contracts", "scam_shield.py");
